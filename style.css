@@ -5,14 +5,6 @@
 html {
   font-family: 'Catamaran', sans-serif;
   background-color: white;
-  /*The following white-shadow block was only necessary when I had regular text spilling over a background image.
-  text-shadow:
-    /*cardinal* 1px 0px 0px white, -1px 0px 0px white, 0px 1px 0px white, 0px -1px 0px white
-    /*diagonal*, 1px 1px 0px white, 1px -1px 0px white, -1px 1px 0px white, -1px -1px 0px white
-    /*rounding , 2px 1px 0px black, 2px -1px 0px black, 1px 2px 0px black, 1px -2px 0px black, -1px 2px 0px black, -1px -2px 0px black, -2px 1px 0px black, -2px -1px 0px black */
-    /*blur* , 0 0 4px white
-    */
-    ;
 }
 
 body {
@@ -64,23 +56,26 @@ nav {
   background-color: rgb(230, 159, 0); /*previously #996600*/
   font-weight: 500;
   margin-top: -16px; /*I don't understand why this is necessary to eliminate the gap between the header section and the nav section, but this is apparently what I needed to do to get those two to touch, at least on my screen.*/
-
-  /*The following was added on 2020-02-11*/
   text-align: center;
 }
 
 .nav1, .nav2, .nav3 { /*These were added on 2020-02-11*/
   color: white; /* alternate colors considered include 
-    rgb(86, 180, 233)
-    rgb(240,228,66)
-    rgb(213,94,0)
-    rgb(0,158,115) */
+  rgb(86, 180, 233)
+  rgb(240,228,66)
+  rgb(213,94,0)
+  rgb(0,158,115) */
   text-shadow:
   /*cardinal*/ 2px 0px 0px black, -2px 0px 0px black, 0px 2px 0px black, 0px -2px 0px black
   /*diagonal*/, 1px 1px 0px black, 1px -1px 0px black, -1px 1px 0px black, -1px -1px 0px black
   /*rounding*/ , 2px 1px 0px black, 2px -1px 0px black, 1px 2px 0px black, 1px -2px 0px black, -1px 2px 0px black, -1px -2px 0px black, -2px 1px 0px black, -2px -1px 0px black
   /*blur*/ , 0 0 6px black
   ;
+}
+
+nav p a { /* This section resizes the nav bar link padding to bring the links closer together. */
+  padding-right: 2px;
+  padding-left: 2px;
 }
 
 #nav4 {
@@ -347,7 +342,7 @@ p img {
 
 footer {
   clear: both;
-  background-color: #336699;
+  background-color: hsl(210, 100%, 50%); /* Was #336699; */
   padding: 0 1em;
 }
 
