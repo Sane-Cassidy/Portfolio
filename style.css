@@ -1,0 +1,356 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Catamaran', sans-serif;
+  background-color: white;
+  /*The following white-shadow block was only necessary when I had regular text spilling over a background image.
+  text-shadow:
+    /*cardinal* 1px 0px 0px white, -1px 0px 0px white, 0px 1px 0px white, 0px -1px 0px white
+    /*diagonal*, 1px 1px 0px white, 1px -1px 0px white, -1px 1px 0px white, -1px -1px 0px white
+    /*rounding , 2px 1px 0px black, 2px -1px 0px black, 1px 2px 0px black, 1px -2px 0px black, -1px 2px 0px black, -1px -2px 0px black, -2px 1px 0px black, -2px -1px 0px black */
+    /*blur* , 0 0 4px white
+    */
+    ;
+}
+
+body {
+  margin: 0;
+}
+
+header, nav, a, footer {
+  color: #F7F9FB; /*#F8E9A1;  This is an alternative, light yellow color.*/
+  text-shadow:
+    /*cardinal*/ 2px 0px 0px black, -2px 0px 0px black, 0px 2px 0px black, 0px -2px 0px black
+    /*diagonal*/, 1px 1px 0px black, 1px -1px 0px black, -1px 1px 0px black, -1px -1px 0px black
+    /*rounding*/ , 2px 1px 0px black, 2px -1px 0px black, 1px 2px 0px black, 1px -2px 0px black, -1px 2px 0px black, -1px -2px 0px black, -2px 1px 0px black, -2px -1px 0px black
+    /*blur*/ , 0 0 6px black
+    ;
+}
+
+header {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #5085A5; /*#8FC1E3; Lighter blue.  #00887A; Muted green.  #015249; Dark green. */
+  padding: .1em 2em;
+  margin-bottom: 0;
+}
+
+header h2 {
+  margin-top: -15px;
+  text-align: right;
+  /*min-width: 17em;*/
+}
+
+h1 {
+  text-align: center;
+}
+
+.centeredWrapper {
+  max-width: 800px; /* This controls the maximum width of the display area. Somebody opening the browser wider than this will just be generating wasted space to left and right of the content.*/
+  margin: 0 auto;
+}
+
+main {
+  max-width: 800px; /* This controls the maximum width of the display area. Somebody opening the browser wider than this will just be generating wasted space to left and right of the content.*/
+  margin: 0 auto;
+}
+
+main a {
+  text-decoration: none; /* This is what takes the underline away. */
+}
+
+nav {
+  background-color: rgb(230, 159, 0); /*previously #996600*/
+  font-weight: 500;
+  margin-top: -16px; /*I don't understand why this is necessary to eliminate the gap between the header section and the nav section, but this is apparently what I needed to do to get those two to touch, at least on my screen.*/
+
+  /*The following was added on 2020-02-11*/
+  text-align: center;
+}
+
+.nav1, .nav2, .nav3 { /*These were added on 2020-02-11*/
+  color: white; /* alternate colors considered include 
+    rgb(86, 180, 233)
+    rgb(240,228,66)
+    rgb(213,94,0)
+    rgb(0,158,115) */
+  text-shadow:
+  /*cardinal*/ 2px 0px 0px black, -2px 0px 0px black, 0px 2px 0px black, 0px -2px 0px black
+  /*diagonal*/, 1px 1px 0px black, 1px -1px 0px black, -1px 1px 0px black, -1px -1px 0px black
+  /*rounding*/ , 2px 1px 0px black, 2px -1px 0px black, 1px 2px 0px black, 1px -2px 0px black, -1px 2px 0px black, -1px -2px 0px black, -2px 1px 0px black, -2px -1px 0px black
+  /*blur*/ , 0 0 6px black
+  ;
+}
+
+#nav4 {
+  color: hsl(120, 100%, 90%); /* hsl(201.6, 77%, 80%); /* L= 62.5% for rgb(86, 180, 233) */
+}
+
+#nav5 {
+  color: hsl(240, 100%, 90%); /* hsl(26.5, 100%, 80%); /* L= 41.8% for rgb(213,94,0) */
+  /*hsl(55.9, 85.3%, 60%);  based on rgb(240,228,66) */
+}
+
+#nav6 {
+  color: hsl(0, 100%, 90%); /* hsl(163.7, 100%, 80%); /* L= 31% for rgb(0,158,115) */
+}
+
+ul {
+  padding: 0 1em;
+  list-style-type: none;
+  text-align: center; /* Adding this to the container shifts the whole thing to center. */
+}
+
+ul li {
+  display: inline;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.simpleList {
+  list-style-type: circle;
+  display: list-item;
+  text-align: left;
+}
+
+.lefty {
+  text-align: left;
+}
+
+.toolsMaterials {
+  vertical-align: top;
+}
+
+nav a {
+  font-size: 1.2em;
+  padding: 0 .5em 0 .5em;
+  text-decoration: none; /* This is what takes the underline away. */
+}
+
+nav a:hover {
+  background-color: rgb(255, 255, 255, 0.3); /* #687864; */
+}
+
+main {
+  padding: 0 1em;
+}
+
+.homePage {
+  background-image: url("images/p3_hjb_full-set.JPG");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: right top;
+}
+
+h3 {
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+}
+
+.disappearingInk {
+  color: white;
+}
+
+figure {
+  float: left;
+  width: 60%;
+}
+
+img {
+  width: 100%;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: .9em;
+  text-align: center;
+}
+
+article {
+  overflow: auto;
+}
+
+@media only screen and (max-width: 550px) {
+  figure {
+    width: 100%;
+    margin: 0;
+  }
+  article {
+    width: 100%;
+  }
+}
+
+.circle {
+  margin: 10px; /*was 10px*/
+  text-align: center;
+  float: left;
+  width: 221px;
+  height: 221px;
+  border: 5px solid #8FC1E3;
+  border-radius: 50%;
+  display: inline-block; /* added 2020-02-12 */
+}
+
+.containerOfCircles {
+  margin: 0 auto;
+  max-width: 723px; /*723 is a magic number here. Seems to be the smallest pixel width that allows for three circles across.*/
+  display: flex; /* added 2020-02-12 */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.darkGel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.darkGel:hover {
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+table {
+  height: 100%;
+  width: 100%;
+  vertical-align: center;
+  text-align: center; /* This doesn't seem to do anything to items with names so short that they don't wrap.  Or maybe that should be: items that are only one line long. I have no idea why. */
+}
+
+.circle a {
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+#oaomw {
+  background-image: url("images/p1_oaomw_tiffany-in-chair.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 -20px;
+}
+
+#sbike {
+  background-image: url("images/p2_sbike_ridden.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+#hjb {
+  background-image: url("images/p3_hjb_final, top.JPG");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+#elfshelf {
+  background-image: url("images/p4_elfshelf_CAD.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+#monomano {
+  background-image: url("images/p5_monomano_CAD-in-use.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center 5px;
+}
+
+#tensegrity {
+  background-image: url("images/p6_tensegrity_cover-letter.JPG");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+#gofast {
+  background-image: url("images/p7_gofast_still.JPG");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 0;
+}
+
+#mothership {
+  background-image: url("images/p8_mothership_matthew.JPG");
+  background-repeat: no-repeat;
+  background-size: auto 120%;
+  background-position: center;
+}
+
+#twinbs {
+  background-image: url("images/p9_twinbs_piece.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center -15px;
+}
+
+#fiberspool {
+  background-image: url("images/p10_fiberspool_CAD-cable-weights.JPG");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+}
+
+#escher {
+  background-image: url("images/p11_Escher_puzzle_complete.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+video {
+  width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+
+p a {
+  color: gray;
+  text-shadow: none;
+  font-style: bold;
+}
+
+/* Turns out, I just don't like how this looks.
+p {
+  text-indent: 2em;
+}
+*/
+
+/* Couldn't get this to work, 2019-03-22
+.halfhigh {
+  line-height: 5px;
+}
+*/
+
+/* I'm just throwing code at the problem at this point, and none of it is working.
+p hr {
+  clear: both;
+  height: 10px;
+  visibility: hidden;
+  border: 0 none;
+  display: none;
+}
+*/
+
+p img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  min-width: 300px;
+}
+
+footer {
+  clear: both;
+  background-color: #336699;
+  padding: 0 1em;
+}
+
+footer a {
+  text-decoration: none; /* This is what takes the underline away. */
+}
