@@ -78,6 +78,10 @@ nav p a { /* This section resizes the nav bar link padding to bring the links cl
   padding-left: 2px;
 }
 
+#email {
+  padding-left: 3px;
+}
+
 #nav4 {
   color: hsl(120, 100%, 90%); /* hsl(201.6, 77%, 80%); /* L= 62.5% for rgb(86, 180, 233) */
 }
