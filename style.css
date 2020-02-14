@@ -21,17 +21,16 @@ header, nav, a, footer {
     ;
 }
 
-header {
+header { /* I used the header tag in an early version of this portfolio website, but I don't think I've used it at all since I moved to a design where the nav bar contains all necessary information. */
   font-family: 'Josefin Sans', sans-serif;
   background-color: #5085A5; /*#8FC1E3; Lighter blue.  #00887A; Muted green.  #015249; Dark green. */
   padding: .1em 2em;
   margin-bottom: 0;
 }
 
-header h2 {
+header h2 { /* Superfluous: header tag unused. */
   margin-top: -15px;
   text-align: right;
-  /*min-width: 17em;*/
 }
 
 h1 {
@@ -48,8 +47,12 @@ main {
   margin: 0 auto;
 }
 
+.indexPage { /* Experimenting here to see if I can make the circles more than 3-across. */
+  max-width: 1000px;
+}
+
 main a {
-  text-decoration: none; /* This is what takes the underline away. */
+  text-decoration: none; /* Takes the underline away. */
 }
 
 nav {
@@ -59,12 +62,8 @@ nav {
   text-align: center;
 }
 
-.nav1, .nav2, .nav3 { /*These were added on 2020-02-11*/
-  color: white; /* alternate colors considered include 
-  rgb(86, 180, 233)
-  rgb(240,228,66)
-  rgb(213,94,0)
-  rgb(0,158,115) */
+.nav1, .nav2, .nav3 {
+  color: white; /* alternate colors considered include rgb(86, 180, 233) rgb(240,228,66) rgb(213,94,0) rgb(0,158,115) */
   text-shadow:
   /*cardinal*/ 2px 0px 0px black, -2px 0px 0px black, 0px 2px 0px black, 0px -2px 0px black
   /*diagonal*/, 1px 1px 0px black, 1px -1px 0px black, -1px 1px 0px black, -1px -1px 0px black
@@ -74,11 +73,11 @@ nav {
 }
 
 nav p a { /* This section resizes the nav bar link padding to bring the links closer together. */
-  padding-right: 2px;
-  padding-left: 2px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 
-#email {
+#email {/* Hack for stupid problem where text shadow would but cut off left side of link to my email address on About Me page. */
   padding-left: 3px;
 }
 
@@ -135,7 +134,7 @@ main {
   padding: 0 1em;
 }
 
-.homePage {
+.homePage { /* Do I even still use this class anymore? I don't think so. */
   background-image: url("images/p3_hjb_full-set.JPG");
   background-repeat: no-repeat;
   background-size: 40%;
@@ -184,19 +183,19 @@ article {
 }
 
 .circle {
-  margin: 10px; /*was 10px*/
+  margin: 10px;
   text-align: center;
-  float: left;
+  /* float: left;  Commented out because Visual Studio Code indicated an error. Error may or may not related to my adoption of the display: flex structure which I adopted, obviating this line. I'm not sure. */
   width: 221px;
   height: 221px;
   border: 5px solid #8FC1E3;
   border-radius: 50%;
-  display: inline-block; /* added 2020-02-12 */
+  display: inline-block; /* added 2020-02-12, may not be necessary */
 }
 
 .containerOfCircles {
   margin: 0 auto;
-  max-width: 723px; /*723 is a magic number here. Seems to be the smallest pixel width that allows for three circles across.*/
+  max-width: 1000px; /*964px is smallest width that allows for 4 circles in row. 723px is smallest width that allows for 3 circles in row.*/
   display: flex; /* added 2020-02-12 */
   flex-direction: row;
   flex-wrap: wrap;
@@ -303,7 +302,7 @@ table {
 }
 
 video {
-  width: 800px;
+  width: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -313,28 +312,6 @@ p a {
   text-shadow: none;
   font-style: bold;
 }
-
-/* Turns out, I just don't like how this looks.
-p {
-  text-indent: 2em;
-}
-*/
-
-/* Couldn't get this to work, 2019-03-22
-.halfhigh {
-  line-height: 5px;
-}
-*/
-
-/* I'm just throwing code at the problem at this point, and none of it is working.
-p hr {
-  clear: both;
-  height: 10px;
-  visibility: hidden;
-  border: 0 none;
-  display: none;
-}
-*/
 
 p img {
   display: block;
@@ -350,6 +327,15 @@ footer {
   padding: 0 1em;
 }
 
+footer li{ /* Hack to bring links closer together so they don't wrap on small screen. */
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 footer a {
   text-decoration: none; /* This is what takes the underline away. */
+}
+
+footer li:hover {
+  background-color: rgb(255, 255, 255, 0.3); /* #687864; */
 }
