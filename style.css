@@ -328,14 +328,16 @@ footer {
 }
 
 footer li{ /* Hack to bring links closer together so they don't wrap on small screen. */
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-footer a {
-  text-decoration: none; /* This is what takes the underline away. */
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 footer li:hover {
   background-color: rgb(255, 255, 255, 0.3); /* #687864; */
+}
+
+footer a {
+  text-decoration: none; /* This is what takes the underline away. */
 }
