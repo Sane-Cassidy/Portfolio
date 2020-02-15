@@ -7,11 +7,18 @@ html {
   background-color: white;
 }
 
-body {
-  margin: 0;
+html, body {
+  height: 100%;
 }
 
-header, nav, a, footer {
+body {
+  margin: 0;
+  min-height: 100%;
+  display: flex;  /* Added 2020-02-14 to try to push footer down. */ 
+  flex-direction: column;
+}
+
+nav, a, footer {
   color: #F7F9FB; /*#F8E9A1;  This is an alternative, light yellow color.*/
   text-shadow:
     /*cardinal*/ 2px 0px 0px black, -2px 0px 0px black, 0px 2px 0px black, 0px -2px 0px black
@@ -19,18 +26,6 @@ header, nav, a, footer {
     /*rounding*/ , 2px 1px 0px black, 2px -1px 0px black, 1px 2px 0px black, 1px -2px 0px black, -1px 2px 0px black, -1px -2px 0px black, -2px 1px 0px black, -2px -1px 0px black
     /*blur*/ , 0 0 6px black
     ;
-}
-
-header { /* I used the header tag in an early version of this portfolio website, but I don't think I've used it at all since I moved to a design where the nav bar contains all necessary information. */
-  font-family: 'Josefin Sans', sans-serif;
-  background-color: #5085A5; /*#8FC1E3; Lighter blue.  #00887A; Muted green.  #015249; Dark green. */
-  padding: .1em 2em;
-  margin-bottom: 0;
-}
-
-header h2 { /* Superfluous: header tag unused. */
-  margin-top: -15px;
-  text-align: right;
 }
 
 h1 {
@@ -44,7 +39,8 @@ h1 {
 
 main {
   max-width: 800px; /* This controls the maximum width of the display area. Somebody opening the browser wider than this will just be generating wasted space to left and right of the content.*/
-  margin: 0 auto;
+  margin: 16px auto;
+  /* flex: 1 0 auto;  Added 2020-02-14 to try to push footer down. */
 }
 
 .indexPage { /* Experimenting here to see if I can make the circles more than 3-across. */
@@ -58,8 +54,18 @@ main a {
 nav {
   background-color: rgb(230, 159, 0); /*previously #996600*/
   font-weight: 500;
-  margin-top: -16px; /*I don't understand why this is necessary to eliminate the gap between the header section and the nav section, but this is apparently what I needed to do to get those two to touch, at least on my screen.*/
   text-align: center;
+  /* flex: 1 0 auto;  Added 2020-02-14 to try to push footer down. */
+}
+
+nav p{
+  margin-top: 0; /* This clears a white space that was appearing above the nav bar. */
+  margin-bottom: 0;
+}
+
+nav p a{ /* This section resizes the nav bar link padding to bring the links closer together. */
+  padding-right: 3px;
+  padding-left: 3px;
 }
 
 .nav1, .nav2, .nav3 {
@@ -70,15 +76,6 @@ nav {
   /*rounding*/ , 2px 1px 0px black, 2px -1px 0px black, 1px 2px 0px black, 1px -2px 0px black, -1px 2px 0px black, -1px -2px 0px black, -2px 1px 0px black, -2px -1px 0px black
   /*blur*/ , 0 0 6px black
   ;
-}
-
-nav p a { /* This section resizes the nav bar link padding to bring the links closer together. */
-  padding-right: 3px;
-  padding-left: 3px;
-}
-
-#email {/* Hack for stupid problem where text shadow would but cut off left side of link to my email address on About Me page. */
-  padding-left: 3px;
 }
 
 #nav4 {
@@ -92,6 +89,10 @@ nav p a { /* This section resizes the nav bar link padding to bring the links cl
 
 #nav6 {
   color: hsl(0, 100%, 90%); /* hsl(163.7, 100%, 80%); /* L= 31% for rgb(0,158,115) */
+}
+
+#email {/* Hack for stupid problem where text shadow would be cut off left side of link to my email address on About Me page. */
+  padding-left: 3px;
 }
 
 ul {
@@ -126,7 +127,7 @@ nav a {
   text-decoration: none; /* This is what takes the underline away. */
 }
 
-nav a:hover {
+nav a:hover, footer a:hover {
   background-color: rgb(255, 255, 255, 0.3); /* #687864; */
 }
 
@@ -325,6 +326,11 @@ footer {
   clear: both;
   background-color: hsl(210, 100%, 50%); /* Was #336699; */
   padding: 0 1em;
+  flex-shrink: 0; /* Added 2020-02-14 to try to push footer down. */
+}
+
+.notFooter {
+  flex: 1 0 auto; /* Added 2020-02-14 to try to push footer down. */
 }
 
 footer li{ /* Hack to bring links closer together so they don't wrap on small screen. */
@@ -334,10 +340,11 @@ footer li{ /* Hack to bring links closer together so they don't wrap on small sc
   padding-right: 3px;
 }
 
-footer li:hover {
-  background-color: rgb(255, 255, 255, 0.3); /* #687864; */
-}
-
 footer a {
   text-decoration: none; /* This is what takes the underline away. */
+}
+
+footer ul { /* This was necessary to remove white space below the footer bar. */
+  margin-top: 0;
+  margin-bottom: 0;
 }
